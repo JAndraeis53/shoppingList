@@ -44,4 +44,70 @@ const shoppingList = [
 
 ]
 
-console.log(shoppingList)
+// console.log(shoppingList)
+
+const addToShoppingList = (shoppingObject) => {
+    const lastIndex = shoppingList.length - 1
+    const currentLastShopping = shoppingList[lastIndex]
+    const maxId = currentLastShopping.id
+    const idForNewShopping = maxId + 1
+
+    shoppingObject.id = idForNewShopping
+
+    // if (!Date.now) {
+    //     Date.now = function now() {
+    //         return new Date().getTime();
+    //     };
+    // }
+    
+    // shoppingObject.dateCreated = Date
+    shoppingList.push(shoppingObject)
+}
+
+bacon = {
+    item: "bacon",
+    price: 4,
+    organic: true
+}
+
+waffles = { 
+    item: "waffles",
+    price: 5,
+    organic: false
+}
+
+coffee ={
+    item: "coffee",
+    price: 13,
+    organic: true
+}
+
+icecream = {
+    item: "icecream",
+    price: 11,
+    organic: true
+}
+
+brocoli = {
+    item: "brocoli",
+    price: 9,
+    organic: true
+}
+
+addToShoppingList(bacon)
+addToShoppingList(waffles)
+addToShoppingList(coffee)
+addToShoppingList(icecream)
+addToShoppingList(brocoli)
+
+// console.log(shoppingList)
+
+
+const reconsiderPrice = 8
+
+for (const shopping of shoppingList){
+    if (shopping.price > reconsiderPrice){
+    // shopping.price = shopping.price * 1.05
+    console.log(`The ${shopping.item} cost $${shopping.price}! Do you need to reconsider?`)
+    }
+}
