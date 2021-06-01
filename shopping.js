@@ -44,4 +44,14 @@ const shoppingList = [
 
 ]
 
-console.log(shoppingList)
+// console.log(shoppingList)
+
+const addToShoppingList = (shoppingObject) => {
+    const lastIndex = shoppingList.length - 1
+    const currentLastShopping = shoppingList[lastIndex]
+    const maxId = currentLastShopping.id
+    const idForNewShopping = maxId + 1
+
+    shoppingObject.id = idForNewShopping
+    shoppingList.push(shoppingObject)
+}
