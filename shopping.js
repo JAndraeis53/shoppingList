@@ -29,14 +29,19 @@ const shoppingList = [
         price: 3,
         organic: true
     },
-    
+    sandwichBuns ={
+        id:6,
+        item: "sandwich buns",
+        price: 1,
+        organic: false
+    },
+    condiments = {
+        id: 7,
+        item: "mayo",
+        price: 22,
+        organic: false
+    }
 
 ]
 
-// Milk
-// Eggs
-// Pizza rolls
-// A protein
-// Your favorite fruit
-// Sandwich buns
-// Condiments
+console.log(shoppingList)
